@@ -1,0 +1,46 @@
+
+
+
+.blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-size: 2.25rem;
+  }
+  
+  .blog-header-logo:hover {
+    text-decoration: none;
+  }
+
+.sidebar {
+    position: fixed;
+    top:182px;
+    left: 0;
+    height: 100%;
+    width: 166px;
+    background-color: #107be6;
+    padding-top: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+.sidebar-collapsed {
+    transform: translateX(-200px);
+}
+.sidebar .nav-link {
+    color: black;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.sidebar .nav-link:hover {
+    background-color: #91bbeb;
+}
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+.toggle-btn {
+    position: fixed;
+    top: 200px;
+    left: 210px;
+    z-index: 1100;
+}
+

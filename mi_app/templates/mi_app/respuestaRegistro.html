@@ -1,0 +1,37 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Éxito</title>
+    <script src={% static 'mi_app/assets/js/bootstrap.bundle.min.js' %}></script>
+</head>
+<body>
+    <div id="mensaje" 
+         data-mensaje="{% if messages %}{% for message in messages %}{{ message }}{% endfor %}{% endif %}" 
+         data-tipo="{% if messages %}{% for message in messages %}{{ message.tags }}{% endfor %}{% endif %}"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var mensajeElement = document.getElementById('mensaje');
+            if (mensajeElement) {
+                var mensaje = mensajeElement.getAttribute('data-mensaje');
+                var tipo = mensajeElement.getAttribute('data-tipo');
+
+                if (tipo === 'success') {
+                    alert("Usuario creado con éxito");
+                    // Redirige a la pagina de inicio de sesion
+                    window.location.href = "{% url 'inicio_sesion' %}";
+                } else if (tipo === 'error') {
+                    alert("Error al crear el usuario: " + mensaje);
+                    // Redirige de nuevo a la página de registro
+                    window.location.href = "{% url 'registro' %}";
+                }
+
+                
+            }
+        });
+    </script>
+</body>
+</html>

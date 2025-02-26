@@ -1,0 +1,521 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+
+    <head><script src={% static '/mi_app/assets/js/color-modes.js' %}></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MM-110</title>
+        
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/horario/">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+        <link href={% static '/mi_app/assets/dist/css/bootstrap.min.css' %} rel="stylesheet">
+      
+        <link rel="stylesheet" href={% static '/mi_app/css/clases.css' %}>
+
+        <link rel="stylesheet" href={% static 'mi_app/css/comentarios.css' %}>
+
+        <style>
+            .comentarios{
+                color: black;
+            }
+            /* Estilo para cambiar el color de los comentarios */
+            #comentarios-list li {
+            color: black; /* Cambia el color del texto a negro */
+            }
+            body {
+              /* padding-top: 3rem; */
+              /* padding-bottom: 3rem; */
+                 padding-left: 2rem;
+                 padding-right: 2rem;
+                 background-color: #262a2e;
+                 height: 100%;
+             }
+
+
+            .nav-scroller {
+                 position: relative;
+                 z-index: 2;
+                 height: 2.75rem;
+                 overflow-y: hidden;
+            }
+
+             .nav-scroller .nav {
+                 display: flex;
+                 flex-wrap: nowrap;
+                 padding-bottom: 1rem;
+                 margin-top: -1px;
+                 overflow-x: auto;
+                 text-align: center;
+                 white-space: nowrap;
+                 -webkit-overflow-scrolling: touch;
+             }
+
+        </style>
+    </head>
+    <body>
+        
+              <!-- Sidebar Panel de navegacion-->
+        <button class="btn btn-primary toggle-btn" id="toggleSidebar"style="background-color:rgb(170, 159, 159); widht=20px"></button>
+        <i class="bi bi-list"></i>
+        </button>
+
+        <div class="sidebar" id="sidebar">
+
+            <nav class="navbar navbar-light">
+                <ul class="nav flex-column">
+                    <!-- clases-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#menu1" aria-expanded="false" aria-controls="menu1">Primer Periodo</a>
+                        <div class="collapse" id="menu1">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="IS-110.html">Introduccion a la Ingenieria en Sistemas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="MM-110.html">Matematica I</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="MM-111.html">Geometría y Trigonometría</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="CS-101.html">Sociología</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#menu2" aria-expanded="false" aria-controls="menu2">Segundo Periodo</a>
+                        <div class="collapse" id="menu2">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="MM-211.html">Vectores y Matrices</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="IN-101.html">Ingles I</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="MM-201.html">Calculo I</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Electiva1.html">Electiva I</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#menu3" aria-expanded="false" aria-controls="menu3">Tercer periodo</a>
+                        <div class="collapse" id="menu3">
+                            <ul class="nav flex-column ms-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="MM-202.html">Calculo II</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="IN-102.html">Ingles II</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="MM-314.html">Programacion I</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="EG-011.html">Español General I</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <!-- Encabezado -->
+            <div class="container">
+                <header class="border-bottom lh-1 py-3">
+                    <div class="row flex-nowrap justify-content-between align-items-center">
+                        <div class="col-4 pt-1">
+                            <img width="100" height="100" src={% static '/mi_app/img/Logo_IS_editado.png' %} alt="">
+                         <!-- <svg class="bd-placeholder-img" width="100" height="70" xmlns="" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Logo</text></svg> -->
+                        </div>  
+                        <div class="col-4 text-center">
+                            <a class="blog-header-logo text-body-emphasis text-decoration-none"  href="#">Ingenieria en Sistemas</a>
+                        </div>
+                        <div class="col-4 d-flex justify-content-end align-items-center">
+                            <a class="btn btn-sm btn-outline-secondary" href="perfil.html">Mi Perfil</a>
+                        </div>
+                    </div>
+               </header>
+        
+                <div class="nav-scroller py-1 mb-3 border-bottom">
+                    <nav class="nav nav-underline justify-content-between">
+                        <a class="nav-item nav-link link-body-emphasis active" href="inicio.html">Inicio</a>
+                        <a class="nav-item nav-link link-body-emphasis" href="recomendaciones.html">Recomendaciones</a>
+                        <a class="nav-item nav-link link-body-emphasis" href="horario.html">Horario</a>
+                        <a class="nav-item nav-link link-body-emphasis" href="Plan_Estudio.html">Plan de Estudio</a>
+                    </nav>
+               </div>
+           </div>
+                    <!-- Informacion General de la clase-->
+           <div class="contenedor2" style="background-color: rgb(112, 112, 122); color:rgb(41, 41, 129);font-weight: bolder; position: auto">
+
+                <h1>Matemáticas I</h1>
+                <p>El curso ofrece una introducción a las funciones matemáticas 
+                    y a algunas aplicaciones de las mismas a través de los 
+                    siguientes temas: sistema de números reales; elementos de 
+                    geometría analítica; gráficas de ecuaciones e inecuaciones 
+                    lineales y cuadráticas en dos variables reales; introducción a 
+                    la programación lineal.</p>
+                <p class="propiedades"></p>
+                <a>Codigo: MM-110</a>
+                <a> Requisitos: Ninguno</a>
+                <a>Unidades Valorativas: 5</a>
+
+            </div>
+        <!-- Menu Horario y Recomendacion -->
+    
+            <div class="contenedorMenu"style="background-color: black">
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: black;">
+                    <div class="container"style="background-color: black;">
+                
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation" >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav2">
+                            <ul class="navbar-nav" style="display: flex; justify-content: center; align-items: center;">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="javascript:abrir()">Horarios De la clase</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="javascript:abrir2()">Recomendaciones</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+          
+            <!-- Horario Section -->
+
+                <div class="modal fade" id="Horariodeclases" tabindex="-1" aria-labelledby="HorariodeclasesLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="HorariodeclasesLabel">Horario de Clases</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                           </div>
+                           <div class="modal-body">
+                                <h2 style="text-decoration: underline; color: whitesmoke; font-size: 25px;">Horas en que se imparte la clase:</h2>
+                                <!-- <a>   DIAS    SECCION:  HI-HF: </a> -->
+                                <a>DIAS:LuMaMiJuVi  SECCION:0600   HI-HF:0600-0700 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:0700   HI-HF:0700-0800 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:0701   HI-HF:0700-0800 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:0800   HI-HF:0800-0900 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:0900   HI-HF:0900-1000 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:0901   HI-HF:0900-1000 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1000   HI-HF:1000-1100 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1001   HI-HF:1000-1100 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1100   HI-HF:1100-1200 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1101   HI-HF:1100-1200 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1200   HI-HF:1200-1300 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1300   HI-HF:1300-1400 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1400   HI-HF:1400-1500 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1401   HI-HF:1400-1500 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1500   HI-HF:1500-1600 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1600   HI-HF:1600-1700 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1700   HI-HF:1700-1800 </a>
+                                <a>DIAS:LuMaMiJuVi  SECCION:1800   HI-HF:1800-1900 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Recomendaciones -->
+        
+            <div class="Recomendacion" id="Recomendaciones">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                    <div class="container"style="background-color: rgb(62, 62, 187)">
+                
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav2">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" onclick="javascript:cerrar()">Cerrar</a>
+                                </li>
+                                <h2>Recomendaciones</h2>
+                            </ul>
+                        </div>
+                    </div>
+        
+                </nav>
+                <div class="comentarios">
+                    <h2>Comentarios</h2>
+                    <ul id="comentarios-list">
+                        {% for comentario in comentarios %}
+                        <li>
+                            <strong>{{ comentario.usuario }}:</strong> {{ comentario.texto }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+        
+            </div>
+
+            <div class="Comentarios" id="Coments">     
+                <form id="comentarioForm">
+                    {% csrf_token %}
+                    <input type="hidden" id="nombre_clase" value="MM-110    Matemática I">
+                    <h2>Deja tu comentario</h2> 
+                    <div class="mb-3">
+                        <textarea class="form-control" id="comentario" rows="4" placeholder="Escribe tu comentario aquí"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar comentario</button>
+                </form>
+            </div>
+        
+
+        </div>
+       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script>
+
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+document.getElementById('comentarioForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Evita el envío del formulario de la forma tradicional
+
+    // Obtén los valores de los campos
+    const nombreClase = document.getElementById('nombre_clase').value;
+    const comentarioTexto = document.getElementById('comentario').value;
+    console.log(nombreClase)
+    // Construye el objeto JSON
+    const data = {
+        nombre_clase: nombreClase,
+        comentario: comentarioTexto
+    };
+    const csrfToken = getCookie('csrftoken');
+
+    // Envía la solicitud POST con fetch
+    fetch('/guardar_comentario/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken  // Incluye el token CSRF si es necesario
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+        .then(data => {
+            console.log('Respuesta:', data);
+            if (data.status === 'success') {
+                const comentariosList = document.getElementById('comentarios-list');
+                const newComment = document.createElement('li');
+                newComment.innerHTML = `<strong>${data.comentario.usuario}:</strong> ${data.comentario.texto}`;
+                comentariosList.appendChild(newComment);
+                
+                // Limpiar el campo de comentario
+                document.querySelector('textarea[name="comentario"]').value = '';
+            } else {
+                console.error('Error al guardar el comentario:', data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+    function cargarComentarios(nombre_clase) {
+    // Realizar la solicitud GET para obtener los comentarios
+    fetch(`/mostrar_comentario/?nombre_clase=${nombre_clase}`)
+        .then(response => response.json())
+        .then(data => {
+            // Obtener la lista de comentarios
+            const comentariosList = document.getElementById('comentarios-list');
+            comentariosList.innerHTML = ''; // Limpiar la lista existente
+            
+            // Iterar sobre los comentarios y agregarlos a la lista
+            data.comentarios.forEach(comentario => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${comentario.usuario}:</strong> ${comentario.texto}
+                <div class="like-section">
+                                <button class="like-button" data-comentario-id="${ comentario.id }">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </button>
+                                <span class="like-count">${ comentario.likes } me gusta</span>
+                            </div>
+                `;
+                comentariosList.appendChild(li);
+            
+                // Agregar evento click al botón de Me gusta
+                li.querySelector('.like-button').addEventListener('click', function() {
+                const comentarioId = this.getAttribute('data-comentario-id');
+                incrementarLikes(comentarioId, this);
+            });
+            });
+        })
+        .catch(error => console.error('Error al cargar los comentarios:', error));
+}
+
+function incrementarLikes(comentarioId, button) {
+    // Realizar una solicitud POST para incrementar los likes
+    fetch(`/incrementar_likes/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken')
+        },
+        body: JSON.stringify({ comentario_id: comentarioId }) // Asegúrate de que el comentarioId es correcto
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Actualizar el contador de me gusta en la interfaz
+            const likeCountSpan = button.nextElementSibling;
+            likeCountSpan.textContent = `${data.likes} me gusta`;
+        } else {
+            console.error('Error al incrementar los likes:', data.error);
+        }
+    })
+    .catch(error => console.error('Error al incrementar los likes:', error));
+}
+
+
+// Llama a la función con el nombre de la clase correspondiente
+// Reemplaza 'NombreDeLaClase' con el nombre real de la clase que estás visualizando
+cargarComentarios('MM-110    Matemática I');
+</script>
+<script>
+            /*//funcion para contar me gusta
+            function meGusta(commentId) {
+                // Aquí harías una llamada AJAX para incrementar el contador de "me gusta"
+                fetch(`/like-comment/${commentId}/`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                }).then(response => {
+                    if (response.ok) {
+                        window.location.reload(); // Recargar la página para ver el nuevo conteo de "me gusta"
+                    }
+                });
+            }*/
+            
+            //Panel de navegacion
+
+             // Función para aplicar el estado del sidebar desde localStorage
+             function aplicarEstadoSidebar() {
+                const sidebar = document.getElementById("sidebar");
+                const estado = localStorage.getItem("sidebarEstado");
+
+                if (estado === "collapsed") {
+                    sidebar.classList.add("sidebar-collapsed");
+                    ajustarMargenContenido(true);
+                } else {
+                    sidebar.classList.remove("sidebar-collapsed");
+                    ajustarMargenContenido(false);
+                }
+            }
+
+            // Función para ajustar el margen del contenido principal
+             function ajustarMargenContenido(collapsed) {
+                const mainContent = document.querySelector(".main-content");
+                if (collapsed) {
+                        mainContent.style.marginLeft = "20px";
+                    } else {
+                        mainContent.style.marginLeft = "220px";
+                }
+            }
+
+            // Evento para el botón de toggle del sidebar
+            document.getElementById("toggleSidebar").addEventListener("click", function() {
+                const sidebar = document.getElementById("sidebar");
+                sidebar.classList.toggle("sidebar-collapsed");
+
+            // Guarda el estado del sidebar en localStorage
+                if (sidebar.classList.contains("sidebar-collapsed")) {
+                        localStorage.setItem("sidebarEstado", "collapsed");
+                        ajustarMargenContenido(true);
+                    } else {
+                        localStorage.setItem("sidebarEstado", "expanded");
+                        ajustarMargenContenido(false);
+                    }
+                });
+
+            // Aplica el estado del sidebar al cargar la página
+                document.addEventListener("DOMContentLoaded", aplicarEstadoSidebar);
+
+
+            //menu
+    
+            function abrir() {
+                 var myModal = new bootstrap.Modal(document.getElementById('Horariodeclases'));
+                 myModal.show()
+            }
+
+            function abrir2(){
+                 document.getElementById("Recomendaciones").style.display="block";
+            }
+
+
+            function cerrar(){
+                 document.getElementById("Recomendaciones").style.display="none";
+           }
+           /* //FORMULARIO DE COMENTARIOS
+           // Función para mostrar el formulario
+            function mostrarFormulario() {
+                document.getElementById('Coments').style.display = 'block';
+                document.getElementById('comentarioForm').style.display = 'block';
+            }
+          
+           function cancelarComentario() {
+            // Ocultar el formulario de comentarios
+                document.getElementById('comentarioForm').style.display = 'none';
+            
+            // Limpia los campos del formulario
+                document.getElementById('nombre').value = '';
+                document.getElementById('comentario').value = '';
+            }
+
+            function agregarComentario() {
+                const nombre = document.getElementById("nombre").value;
+                const comentario = document.getElementById("comentario").value;
+
+            // Verifica si los campos están vacíos antes de agregar el comentario
+                if (nombre.trim() !== "" && comentario.trim() !== "") {
+                // Crea un nuevo elemento de comentario
+                    const comentarioDiv = document.createElement("div");
+                    comentarioDiv.classList.add("card", "mt-3");
+                     comentarioDiv.innerHTML = `
+                        
+                        `;
+
+                   // Añade el nuevo comentario al contenedor de comentarios
+                    document.getElementById("Recomendaciones").appendChild(comentarioDiv);
+                }
+
+                 // Limpia el formulario y lo oculta después de enviar el comentario
+                document.getElementById("comentarioForm").reset();
+                document.getElementById("comentarioForm").style.display = 'none';
+            }*/
+
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Éxito</title>
+    <script src="{% static 'mi_app/assets/js/bootstrap.bundle.min.js' %}"></script>
+</head>
+<body>
+    <div id="mensaje" 
+         data-mensaje="{% if messages %}{% for message in messages %}{{ message }}{% endfor %}{% endif %}" 
+         data-tipo="{% if messages %}{% for message in messages %}{{ message.tags }}{% endfor %}{% endif %}"></div>
+
+    <script>
+         window.onload = function() {
+            alert("Usuario o contraseña incorrecto");
+            window.location.href = "{% url 'inicio_sesion' %}";  // Redirige de nuevo a la página de registro
+        };
+    </script>
+</body>
+</html>

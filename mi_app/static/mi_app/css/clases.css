@@ -1,0 +1,171 @@
+
+.blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-size: 2.25rem;
+  }
+  
+  .blog-header-logo:hover {
+    text-decoration: none;
+  }
+   /* Panel de navegacion*/
+.sidebar {
+    position: fixed;
+    top:0px;
+    left: 0;
+    height: 1000px;
+    width: 166px;
+    background-color: #107be6;
+    padding-top: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+.sidebar-collapsed {
+    transform: translateX(-200px);
+}
+.sidebar .nav-link {
+    color: black;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.sidebar .nav-link:hover {
+    background-color: #91bbeb;
+}
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+.toggle-btn {
+    position: fixed;
+    top: 50px;
+    left: 210px;
+    z-index: 1200;
+}
+
+
+
+
+h1 {
+   font-family:Amiri, Georgia, "Times New Roman", serif;
+   font-size: xx-large;
+   font-weight: bolder; /* Hace el texto más grueso */
+   font-size: 2rem; 
+}
+
+p {
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+ }
+
+.contenedor2 {
+    margin: 80px auto 40px auto;
+    width: 900px;
+    margin-top: 20px;
+    padding: 50px;
+    border: 2px solid rgb(31, 35, 230);
+    border-radius: 8px;
+    text-align: center; /* Centra el texto dentro del contenedor */
+ }
+ .contenedor2 a {
+    display: block; /* Hace que cada enlace ocupe toda la línea */
+    color: black;
+    margin-bottom: 10px; /* Espacio entre los elementos */
+}
+
+ .bg-light{
+    background-color: black;
+    color: azure;
+    font-family:Amiri, Georgia, "Times New Roman", serif ;
+ }
+
+ .navbar-nav {
+    margin-top: 20px; /* Añade espacio superior para los elementos del menú */
+    display: flex; /* Usa flexbox para distribución */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 50px; /* Espacio entre los elementos del menú */
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas pequeñas */
+}
+ .navbar-nav .nav-item {
+    flex: 1; /* Distribuye los elementos de manera equitativa */
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    width: auto;
+    color: white !important; /* Color del texto de los enlaces del menú */
+    background-color:black; /* Color de fondo de los enlaces del menú */
+    border-radius: 6px; /* Bordes redondeados de los enlaces del menú */
+    padding: 10px 60px; /* Espacio interior de los enlaces del menú */
+    display: block; 
+    border: 2px solid white;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgb(71, 71, 139); /* Color de fondo al pasar el ratón sobre los enlaces */
+}
+.contenedorMenu h2{
+
+    font-family:Amiri, Georgia, "Times New Roman", serif;
+    color:black;
+   
+ }
+
+.contenedorMenu {
+    
+    margin: 80px auto 20px auto;
+    width: 900px;
+    margin-top: 50px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center; /* Centra el texto dentro del contenedor */
+ }
+
+ .contenedorMenu a {
+    display: block; /* Hace que cada enlace ocupe toda la línea */
+    color: white;
+    margin-bottom: 10px; /* Espacio entre los elementos */
+}
+.Recomendacion {
+    background-color:  white;
+    display:none;
+    margin: 80px auto 20px auto;
+    width: 900px;
+    max-height: 500px;
+    margin-top: 50px;
+    overflow-y: auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center; /* Centra el texto dentro del contenedor */
+ }
+
+ .Recomendacion a {
+    display: block; /* Hace que cada enlace ocupe toda la línea */
+    color: rgb(109, 105, 105);
+    margin-bottom: 10px; /* Espacio entre los elementos */
+}
+
+.modal-content {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.modal-header .btn-close {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.Comentarios{
+    margin: 5px auto 5px auto;
+    width: 900px;
+    height: 350px;
+    margin-top: 50px;
+    padding: 20px;
+    border: 2px solid #262a2e;;;
+    border-radius: 8px;
+    text-align: center; /* Centra el texto dentro del contenedor */
+    
+}

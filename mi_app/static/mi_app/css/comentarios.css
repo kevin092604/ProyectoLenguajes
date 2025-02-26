@@ -1,0 +1,73 @@
+.like-section {
+    margin-top: 10px;         /* Espacio encima de la sección de me gusta */
+    display: flex;            /* Mostrar botón y contador en la misma línea */
+    align-items: center;      /* Alinear verticalmente */
+}
+
+.like-button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white;             /* Color del texto del botón */
+    border: none;             /* Sin borde */
+    border-radius: 5px;       /* Bordes redondeados */
+    padding: 5px 10px;        /* Espaciado interno */
+    cursor: pointer;          /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1em;           /* Tamaño de la fuente */
+}
+
+.like-button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el cursor */
+}
+
+.like-count {
+    margin-left: 10px;        /* Espacio a la izquierda del botón */
+    color: #555;              /* Color del texto del contador */
+}
+            .comentarios {
+    border: 1px solid #ccc;  /* Borde de la cajita principal */
+    border-radius: 8px;      /* Esquinas redondeadas */
+    padding: 15px;           /* Espacio interior */
+    background-color: #f9f9f9; /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de profundidad */
+    margin-top: 20px;        /* Espacio superior */
+}
+
+.comentarios h2 {
+    margin-top: 0;           /* Elimina margen superior del título */
+    font-size: 1.5em;        /* Tamaño de la fuente del título */
+    color: #333;             /* Color del texto del título */
+}
+
+.comentarios ul {
+    list-style-type: none;   /* Elimina las viñetas de la lista */
+    padding: 0;              /* Elimina el padding de la lista */
+    margin: 0;               /* Elimina el margen de la lista */
+}
+
+.comentarios li {
+    border: 1px solid #ddd;  /* Borde de cada comentario */
+    border-radius: 5px;      /* Esquinas redondeadas */
+    padding: 10px;           /* Espacio interior */
+    background-color: #ffffff; /* Fondo blanco para cada comentario */
+    margin-bottom: 10px;     /* Espacio entre comentarios */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de profundidad */
+}
+
+.comentarios li strong {
+    color: #007bff;          /* Color del nombre del usuario */
+    display: block;          /* Hacer que el nombre del usuario ocupe toda la línea */
+    margin-bottom: 5px;      /* Espacio debajo del nombre del usuario */
+}
+.comentarios{
+    color: black;
+}
+/* Estilo para cambiar el color de los comentarios */
+#comentarios-list li {
+    color: black; /* Cambia el color del texto a negro */
+}
+.like-button {
+    transition: background-color 0.3s ease; /* Transición suave del color */
+}
+.like-button {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+    border: 2px solid #4CAF50; /* Borde del botón */
+}

@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+
+    <head><script src={% static 'mi_app/assets/js/color-modes.js' %}></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Recomendaciones</title>
+        
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/horario/">
+
+    
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+        <link href={% static 'mi_app/assets/dist/css/bootstrap.min.css'  %} rel="stylesheet">
+
+      
+        <link rel="stylesheet" href={% static 'mi_app/css/recomendaciones.css'  %}>
+
+        
+        <style>
+
+           body {
+           /* padding-top: 3rem; */
+           /* padding-bottom: 3rem; */
+           padding-left: 2rem;
+           padding-right: 2rem;
+           background-color: #262a2e;;
+           height: 100%;
+            }
+
+            .contenedor{
+            background-color: #262a2e;
+            color: white;
+            margin: 80px auto 20px auto;
+            width: 500px;
+            height:400px;
+            margin-top: 100px;
+            padding: 50px;
+            border: 2px solid white;
+            border-radius: 8px;
+            text-align: center; /* Centra el texto dentro del contenedor */
+            
+            
+         }
+            .contenedor h1,p {
+            display: block; /* Hace que cada enlace ocupe toda la línea */
+            color: lavender;
+         }
+
+            .nav-scroller {
+             position: relative;
+             z-index: 2;
+             height: 2.75rem;
+             overflow-y: hidden;
+         }
+
+            .nav-scroller .nav {
+             display: flex;
+             flex-wrap: nowrap;
+             padding-bottom: 1rem;
+             margin-top: -1px;
+             overflow-x: auto;
+             text-align: center;
+             white-space: nowrap;
+             -webkit-overflow-scrolling: touch;
+         }
+         </style>
+    </head>
+   
+
+    <body>
+
+        <div class="container">
+            <header class="border-bottom lh-1 py-3">
+              <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                  <img width="100" height="100" src={% static 'mi_app/img/Logo_IS_editado.png' %} alt="">
+                  <!-- <svg class="bd-placeholder-img" width="100" height="70" xmlns="" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Logo</text></svg> -->
+                </div>  
+                <div class="col-4 text-center">
+                  <a class="blog-header-logo text-body-emphasis text-decoration-none"  href="#">Ingenieria en Sistemas</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                  <a class="btn btn-sm btn-outline-secondary" href="perfil.html">Mi Perfil</a>
+                </div>
+              </div>
+            </header>
+        
+            <div class="nav-scroller py-1 mb-3 border-bottom">
+              <nav class="nav nav-underline justify-content-between">
+                <a class="nav-item nav-link link-body-emphasis active" href="inicio.html">Inicio</a>
+                <a class="nav-item nav-link link-body-emphasis" href="recomendaciones.html">Recomendaciones</a>
+                <a class="nav-item nav-link link-body-emphasis" href="horario.html">Horario</a>
+                <a class="nav-item nav-link link-body-emphasis" href="Plan_Estudio.html">Plan de estudio</a>
+              </nav>
+            </div>
+          </div>
+
+        <div class="contenedor" style="color: black; position: auto">
+
+            <h1>¡Bienvenido a Recomendaciones!</h1>
+            <p>Podras hacer uso del panel de navegacion que aparece en la parte izquierda de tu pantalla, para navegar por tus clases</p>
+        
+        </div>
+        
+     
+
+    <!-- Sidebar -->
+    <button class="btn btn-primary toggle-btn" id="toggleSidebar"style="background-color:rgb(170, 159, 159); widht=20px"></button>
+        <i class="bi bi-list"></i>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+   
+        <nav class="navbar navbar-light">
+            <ul class="nav flex-column">
+              <!-- clases-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#menu1" aria-expanded="false" aria-controls="menu1">Primer Periodo</a>
+                    <div class="collapse" id="menu1">
+                        <ul class="nav flex-column ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="IS-110.html">Introduccion a la Ingenieria en Sistemas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="MM-110.html">Matematica I</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="MM-111.html">Geometría y Trigonometría</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="CS-101.html">Sociología</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#menu2" aria-expanded="false" aria-controls="menu2">Segundo Periodo</a>
+                    <div class="collapse" id="menu2">
+                        <ul class="nav flex-column ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="MM-211.html">Vectores y Matrices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="IN-101.html">Ingles I</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="MM-201.html">Calculo I</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Electiva1.html">Electiva I</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#menu3" aria-expanded="false" aria-controls="menu3">Tercer periodo</a>
+                    <div class="collapse" id="menu3">
+                        <ul class="nav flex-column ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="MM-202.html">Calculo II</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="IN-102.html">Ingles II</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="MM-314.html">Programacion I</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="EG-011.html">Español General I</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+       
+        <p>Ten cuidado con las palabras que usa al comentar</p>
+        
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Función para aplicar el estado del sidebar desde localStorage
+        function aplicarEstadoSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const estado = localStorage.getItem("sidebarEstado");
+
+            if (estado === "collapsed") {
+                sidebar.classList.add("sidebar-collapsed");
+                ajustarMargenContenido(true);
+            } else {
+                sidebar.classList.remove("sidebar-collapsed");
+                ajustarMargenContenido(false);
+            }
+        }
+
+        // Función para ajustar el margen del contenido principal
+        function ajustarMargenContenido(collapsed) {
+            const mainContent = document.querySelector(".main-content");
+            if (collapsed) {
+                mainContent.style.marginLeft = "20px";
+            } else {
+                mainContent.style.marginLeft = "220px";
+            }
+        }
+
+        // Evento para el botón de toggle del sidebar
+        document.getElementById("toggleSidebar").addEventListener("click", function() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("sidebar-collapsed");
+
+            // Guarda el estado del sidebar en localStorage
+            if (sidebar.classList.contains("sidebar-collapsed")) {
+                localStorage.setItem("sidebarEstado", "collapsed");
+                ajustarMargenContenido(true);
+            } else {
+                localStorage.setItem("sidebarEstado", "expanded");
+                ajustarMargenContenido(false);
+            }
+        });
+
+        // Aplica el estado del sidebar al cargar la página
+        document.addEventListener("DOMContentLoaded", aplicarEstadoSidebar);
+    </script>
+
+    </body>
+</html>
